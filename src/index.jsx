@@ -17,12 +17,12 @@ class Container extends React.Component{
   }
   render(){
     // return<App data={this.state.data} click={this.click}/>
-    return(<div style={this.props.style||{}}>{this.state.data.map((flag, index) => {
+    return(<div style={this.props.style||{lineHeight:0}}>{this.state.data.map((flag, index) => {
       if(flag[0]){
-        return <Container data={flag} style={{width:'50%',height:'50%',display:'inline-block'}} key={index}/>
+        return <Container data={flag} style={{width:'50%',height:'50%',display:'inline-block',lineHeight:0,userSelect:'none'}} key={index}/>
       } else{
-        return flag<0.25? <img src="public/img/1.png" style={{verticalAlign: 'bottom',width:'50%',height:'50%'}} key={index} onClick={this.click(index)} alt=""/>:
-          <img src="public/img/2.png" style={{verticalAlign: 'bottom',width:'50%',height:'50%'}} key={index} onClick={this.click(index)} alt=""/>
+        return flag<0.25? <img src="public/img/1.png" style={{verticalAlign: 'bottom',width:'50%',height:'50%',userSelect:'none'}} key={index} onClick={this.click(index)} alt=""/>:
+          <img src="public/img/2.png" style={{verticalAlign: 'bottom',width:'50%',height:'50%',userSelect:'none'}} key={index} onClick={this.click(index)} alt=""/>
       }
     })}</div>)
   }

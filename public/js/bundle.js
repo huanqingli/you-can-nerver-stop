@@ -9798,12 +9798,12 @@ var Container = function (_React$Component) {
       // return<App data={this.state.data} click={this.click}/>
       return _react2.default.createElement(
         'div',
-        { style: this.props.style || {} },
+        { style: this.props.style || { lineHeight: 0 } },
         this.state.data.map(function (flag, index) {
           if (flag[0]) {
-            return _react2.default.createElement(Container, { data: flag, style: { width: '50%', height: '50%', display: 'inline-block' }, key: index });
+            return _react2.default.createElement(Container, { data: flag, style: { width: '50%', height: '50%', display: 'inline-block', lineHeight: 0, userSelect: 'none' }, key: index });
           } else {
-            return flag < 0.25 ? _react2.default.createElement('img', { src: 'public/img/1.png', style: { verticalAlign: 'bottom', width: '50%', height: '50%' }, key: index, onClick: _this2.click(index), alt: '' }) : _react2.default.createElement('img', { src: 'public/img/2.png', style: { verticalAlign: 'bottom', width: '50%', height: '50%' }, key: index, onClick: _this2.click(index), alt: '' });
+            return flag < 0.25 ? _react2.default.createElement('img', { src: 'public/img/1.png', style: { verticalAlign: 'bottom', width: '50%', height: '50%', userSelect: 'none' }, key: index, onClick: _this2.click(index), alt: '' }) : _react2.default.createElement('img', { src: 'public/img/2.png', style: { verticalAlign: 'bottom', width: '50%', height: '50%', userSelect: 'none' }, key: index, onClick: _this2.click(index), alt: '' });
           }
         })
       );
